@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praticando | Ex.2</title>
+  <script>
+    const notas = [];
+
+    let qtd = prompt('Entre com a quantidade de notas desejada: ');
+
+    while (qtd <= 0 ) {
+      alert('A quantidade não pode ser menor ou igual a 0')
+      qtd = prompt('Entre com a quantidade de notas desejada: ');
+    }
+
+    entradaNotas(notas, qtd);
+
+    if (confirmar(notas) === true) {
+      const resultado = media(notas);
+      document.write(`<h1>Média: ${resultado}</h1>`)
+    } else {
+      alert('Tente Novamente!')
+      document.location.reload()
+    }
+
+    function entradaNotas(array, qtd) {
+      for (let i = 1; i <= qtd; i++) {
+        let entrada = Number(prompt(`Nota #${i}: `));
+
+        if (entrada) {
+          array.push(entrada)
+        } else {
+          while (entrada == '') {
+            alert('Digite um valor!')
+            entrada = Number(prompt(`Nota#${i}: `));
+            if (entrada) {
+              array.push(entrada)
+            }
+          }
+        }
+      }
+    }
+
+    function confirmar(array) {
+      return confirm(`Notas digitadas: ${notas.join(', ')} 
+      \nDeseja continuar ?`);
+    }
+
+    function media(array) {
+      return (array.reduce((acc, curr) => acc + curr) / array.length).toFixed(1);
+    }
+
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

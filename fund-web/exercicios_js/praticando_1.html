@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praticando | Ex. 1</title>
+  <script>
+    const resposta = confirm("Você mora na cidade de São Paulo?");
+    if (resposta === true) {
+      document.write(`
+        <div>
+          <img src="sao_paulo_0.jpg" alt="Cidade de São Paulo" />
+        </div>
+        <h1>São Paulo - Capital</h1>
+      `);
+    } else {
+      document.write(`
+        <div>
+          <img src="sao_paulo_1.jpg" alt="Cidade de São Paulo" />
+        </div>
+        <h1>Está é a minha cidade | São Paulo - Capital</h1>
+      `);
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; outline: 0; box-sizing: border-box; }
+    body { background: whitesmoke;}
+    div { display: flex; justify-content: center; }
+    div img { margin-top: 50px; border-radius: 8px;}
+    h1 { text-align: center; margin-top: 15px; font-family: sans-serif; }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

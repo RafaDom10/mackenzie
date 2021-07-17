@@ -1,0 +1,137 @@
+body {
+  background: url("background-image.jpeg") no-repeat;
+  background-size: auto 100%;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #000;
+  overflow: auto;
+
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-around;
+}
+
+.navbar a {  
+  float: left;
+  text-align: center;
+  padding: 16px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+
+  transition: background-color 0.2s;  
+}
+
+.navbar a:hover {
+  color: #C1EDF7;
+}
+
+.iot-container {
+  position: static;
+  margin-top: 48px; 
+  text-align: justify;
+}
+
+#iot-container .title {
+  padding-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.video-container {
+  position: static;
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+    
+}
+
+.container #link0 {
+  padding-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.container #link1 {
+  padding-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.container ul li{
+  padding-bottom: 30px;
+  text-align: justify;
+}
+
+.container ul li p {
+  padding-top: 16px;  
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.img-container img {
+  width: 952px;
+  height: 453px;
+  border-radius: 4px;
+}
+
+.footer {
+  background: #000;
+  margin-top: 32px;
+  padding: 32px;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #54347D;
+}
+
+.footer a:hover {
+  color: #C1EDF7;
+}
+
+.container ul {
+  padding-left: 24px;
+}
+
+/* MEDIA QUERIES PARA DISPOSITIVOS 480PX */
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .iot-container {
+    position: static;
+    margin-top: 48px; 
+    text-align: justify;
+  }
+  
+  #iot-container .title {
+    padding-bottom: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .img-container img {
+    width: 400px;
+    height: 225px;
+    border-radius: 4px;
+  }
+
+  .video-container video {
+    width: 400px;
+    height: 225px;
+  }
+  
+}
