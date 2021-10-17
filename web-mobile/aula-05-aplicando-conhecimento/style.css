@@ -1,0 +1,64 @@
+/* variables */
+:root {
+  --pageBackground: #f0f0f0;
+  --cardBackground: #fff;
+  --fontColor: #393939;
+  --shadows: rgba(57, 57, 57, 0.2);
+}
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&display=swap");
+
+/* reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+/* basic styles */
+* {
+  font-family: "Urbanist", sans-serif;
+  color: var(--fontColor);
+}
+
+body {
+  background-color: var(--pageBackground);
+}
+
+article {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--cardBackground);
+  box-shadow: 0 0 10px var(--shadows);
+}
+
+article img {
+  width: 50%;
+}
+
+/* mobile */
+* {
+  font-size: 20pt;
+}
+
+/* web and other sizes */
+@media only screen and (min-width: 920px) {
+  * {
+    font-size: 14pt;
+  }
+
+  body {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  article {
+    width: 30%;
+  }
+}
